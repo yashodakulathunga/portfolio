@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K.M.Y.S. Kulathunga | Full-Stack Developer Portfolio</title>
+  <meta name="description" content="Official Interactive Futuristic Portfolio of K.M.Y.S. Kulathunga - Final-Year BICT (Hons) Undergraduate at University of Vavuniya.">
+  
+  <!-- RemixIcon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Particle Canvas & Ambient Mesh Glows -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav-wrapper">
+        <a href="#hero" class="logo">
+          <span class="gradient-text">Kulathunga</span>.dev
+          <span class="logo-dot"></span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About Me</a></li>
+          <li><a href="#explore-hub" class="nav-link">Explore</a></li>
+          <li><a href="#contact" class="nav-link">Contact Me</a></li>
+        </ul>
+
+        <div class="nav-controls">
+          <!-- Command Palette Trigger Button -->
+          <button class="btn btn-secondary btn-sm btn-icon-only open-command-palette" title="Quick Search (Ctrl + K)">
+            <i class="ri-search-line"></i>
+          </button>
+
+          <!-- Theme Color Switcher -->
+          <button class="btn btn-secondary btn-sm btn-icon-only toggle-theme" title="Cycle Neon Color Theme">
+            <i class="ri-palette-line"></i>
+          </button>
+
+          <a href="#" class="btn btn-secondary btn-sm open-cv-modal">
+            <i class="ri-file-text-line"></i> View CV
+          </a>
+        </div>
+
+        <button class="mobile-toggle" aria-label="Toggle navigation menu">
+          <i class="ri-menu-line"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="status-dot"></span>
+            Seeking Full-Stack Internship
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Kulathunga</span>
+          </h1>
+          <div class="hero-subtitle">
+            <i class="ri-terminal-box-line"></i> Fourth-Year BICT (Hons) Undergraduate
+          </div>
+          
+          <p class="hero-description">
+            Final-year BICT (Hons) undergraduate at the University of Vavuniya. Dedicated to architecting modern, responsive, and high-performance web applications focused on intuitive user experiences and real-world software solutions.
+          </p>
+
+
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">
+              <i class="ri-mail-send-line"></i> Contact Me
+            </a>
+            <a href="#about" class="btn btn-secondary">
+              <i class="ri-user-3-line"></i> About Me
+            </a>
+            <a href="#" class="btn btn-secondary open-cv-modal">
+              <i class="ri-file-download-line"></i> Download CV
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3>3+</h3>
+              <p>Full-Stack Systems</p>
+            </div>
+            <div class="stat-item">
+              <h3>4th</h3>
+              <p>Year BICT (Hons)</p>
+            </div>
+            <div class="stat-item">
+              <h3>3</h3>
+              <p>Verified Credentials</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <div class="profile-card-frame tilt-card">
+            <img src="assets/profile.jpg" alt="K.M.Y.S. Kulathunga" class="profile-img">
+          </div>
+          <div class="floating-badge badge-2">
+            <i class="ri-sparkles-line" style="color: var(--cyan);"></i>
+            <span>Full-Stack Ready</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Exploration Hub Section (3D Tilt Cards) -->
+  <section id="explore-hub" class="hub-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="ri-apps-2-line"></i> Interactive Qualifications Hub</span>
+        <h2 class="section-title">Explore My <span class="gradient-text">Qualifications</span></h2>
+        <p class="section-subtitle">Click any interactive card below to open full details, project specs, and skills breakdown.</p>
+      </div>
+
+      <div class="hub-grid">
+        <!-- Projects Card Trigger -->
+        <div class="glass-card hub-card tilt-card open-drawer" data-target="projects-drawer">
+          <div class="hub-icon" style="background: rgba(99, 102, 241, 0.15); border-color: rgba(99, 102, 241, 0.4);">
+            <i class="ri-stack-line" style="color: var(--primary-light);"></i>
+          </div>
+          <h3 class="hub-title">Featured Projects</h3>
+          <p class="hub-desc">Explore full-stack applications (MERN Sports Portal, PHP Internship System, Wedding Suit Management).</p>
+          <div class="hub-footer">
+            <span>View Projects (3)</span>
+            <i class="ri-arrow-right-line"></i>
+          </div>
+        </div>
+
+        <!-- Skills Card Trigger -->
+        <div class="glass-card hub-card tilt-card open-drawer" data-target="skills-drawer">
+          <div class="hub-icon" style="background: rgba(6, 182, 212, 0.15); border-color: rgba(6, 182, 212, 0.4);">
+            <i class="ri-code-box-line" style="color: var(--cyan);"></i>
+          </div>
+          <h3 class="hub-title">Technical Skills</h3>
+          <p class="hub-desc">Interactive breakdown of Frontend, Backend APIs, Databases, and Version Control tools.</p>
+          <div class="hub-footer">
+            <span>Explore Skills & Tech</span>
+            <i class="ri-arrow-right-line"></i>
+          </div>
+        </div>
+
+        <!-- Education Card Trigger -->
+        <div class="glass-card hub-card tilt-card open-drawer" data-target="education-drawer">
+          <div class="hub-icon" style="background: rgba(139, 92, 246, 0.15); border-color: rgba(139, 92, 246, 0.4);">
+            <i class="ri-graduation-cap-line" style="color: var(--violet);"></i>
+          </div>
+          <h3 class="hub-title">Education & Degree</h3>
+          <p class="hub-desc">BICT (Hons) Undergraduate timeline at Faculty of Technological Studies, University of Vavuniya.</p>
+          <div class="hub-footer">
+            <span>View Academic Profile</span>
+            <i class="ri-arrow-right-line"></i>
+          </div>
+        </div>
+
+        <!-- Certifications Card Trigger -->
+        <div class="glass-card hub-card tilt-card open-drawer" data-target="certs-drawer">
+          <div class="hub-icon" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4);">
+            <i class="ri-award-line" style="color: var(--emerald);"></i>
+          </div>
+          <h3 class="hub-title">Certifications</h3>
+          <p class="hub-desc">Verified Coursera IBM Cloud Computing, IBM Software Engineering, and ReactJS Masterclass certificates.</p>
+          <div class="hub-footer">
+            <span>View Credentials</span>
+            <i class="ri-arrow-right-line"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="ri-user-3-line"></i> Biography</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">My journey, passion, and engineering mindset.</p>
+      </div>
+
+      <div class="about-grid" style="grid-template-columns: 1fr;">
+        <div class="glass-card">
+          <h3 class="skill-category-title">
+            <i class="ri-file-user-line"></i> Professional Summary
+          </h3>
+          <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            Motivated and detail-oriented final-year BICT (Hons) undergraduate at the <strong>University of Vavuniya</strong> with hands-on experience in full-stack web development using the MERN stack (MongoDB, Express.js, React, Node.js) and Tailwind CSS.
+          </p>
+          <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            Skilled in developing responsive, user-friendly web applications through academic and personal projects. Seeking a <strong>Full-Stack Development Internship</strong> to apply technical skills, gain industry exposure, contribute to real-world software solutions, and enhance professional growth through team collaboration.
+          </p>
+
+          <div class="values-grid">
+            <div class="value-item">
+              <i class="ri-code-s-slash-line"></i>
+              <h4>Clean Architecture</h4>
+              <p>Scalable, modular codebases adhering to software design patterns.</p>
+            </div>
+            <div class="value-item">
+              <i class="ri-device-line"></i>
+              <h4>Responsive UX</h4>
+              <p>Seamless, modern user interfaces across mobile and desktop displays.</p>
+            </div>
+            <div class="value-item">
+              <i class="ri-lock-password-line"></i>
+              <h4>Secure REST APIs</h4>
+              <p>JWT authentication, password hashing with Bcrypt, and data validation.</p>
+            </div>
+            <div class="value-item">
+              <i class="ri-group-line"></i>
+              <h4>Agile Collaboration</h4>
+              <p>Git workflow, rapid problem solving, and eager team adaptability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="ri-chat-check-line"></i> Get In Touch</span>
+        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">Interested in offering a Full-Stack Internship or working together?</p>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">Contact Information</h3>
+          <div class="contact-info-list">
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <i class="ri-phone-line"></i>
+              </div>
+              <div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Phone / WhatsApp</div>
+                <div style="font-weight: 600; cursor: pointer; color: var(--text-primary);" data-copy="+94 78 564 6809">+94 78 564 6809</div>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <i class="ri-mail-line"></i>
+              </div>
+              <div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Email Address</div>
+                <div style="font-weight: 600; cursor: pointer; color: var(--text-primary);" data-copy="yashodakulathunga2000@gmail.com">yashodakulathunga2000@gmail.com</div>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <i class="ri-map-pin-line"></i>
+              </div>
+              <div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Institution</div>
+                <div style="font-weight: 600;">Faculty of Technological Studies, University of Vavuniya, Sri Lanka</div>
+              </div>
+            </div>
+          </div>
+
+          <h4 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-secondary);">Social & Code Repositories</h4>
+          <div class="footer-socials" style="justify-content: flex-start;">
+            <a href="https://github.com/dashboard" target="_blank" class="social-link" title="GitHub">
+              <i class="ri-github-fill"></i>
+            </a>
+            <a href="https://linkedin.com/in/yashoda-kulathunga-52b633389" target="_blank" class="social-link" title="LinkedIn">
+              <i class="ri-linkedin-fill"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="form-name">Your Name</label>
+              <input type="text" id="form-name" class="form-input" placeholder="e.g. Hiring Manager / Recruiter" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-email">Your Email</label>
+              <input type="email" id="form-email" class="form-input" placeholder="e.g. recruiter@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-subject">Subject</label>
+              <input type="text" id="form-subject" class="form-input" placeholder="Full-Stack Internship Opportunity" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-message">Message</label>
+              <textarea id="form-message" class="form-input" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="ri-send-plane-fill"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-socials">
+        <a href="https://github.com/dashboard" target="_blank" class="social-link"><i class="ri-github-fill"></i></a>
+        <a href="https://linkedin.com/in/yashoda-kulathunga-52b633389" target="_blank" class="social-link"><i class="ri-linkedin-fill"></i></a>
+        <a href="mailto:yashodakulathunga2000@gmail.com" class="social-link"><i class="ri-mail-line"></i></a>
+      </div>
+      <p>© 2026 K.M.Y.S. Kulathunga. All Rights Reserved. Built with HTML5, Vanilla CSS & Modern JS.</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       COMMAND PALETTE SEARCH MODAL (Next-Level Search Feature)
+       ========================================================================== -->
+  <div class="command-palette-backdrop" id="command-palette">
+    <div class="command-palette-box">
+      <div class="command-search-bar">
+        <i class="ri-search-line"></i>
+        <input type="text" id="command-input" class="command-input" placeholder="Type a command or search section (e.g., Projects, Skills, Contact)...">
+      </div>
+      <div class="command-results">
+        <div class="command-item open-drawer" data-target="projects-drawer">
+          <i class="ri-stack-line" style="color: var(--primary-light);"></i>
+          <span>View Featured Projects</span>
+          <span class="command-shortcut">Projects</span>
+        </div>
+        <div class="command-item open-drawer" data-target="skills-drawer">
+          <i class="ri-code-box-line" style="color: var(--cyan);"></i>
+          <span>Explore Technical Skills & Tech Stack</span>
+          <span class="command-shortcut">Skills</span>
+        </div>
+        <div class="command-item open-drawer" data-target="education-drawer">
+          <i class="ri-graduation-cap-line" style="color: var(--violet);"></i>
+          <span>View Education & University Degree</span>
+          <span class="command-shortcut">Degree</span>
+        </div>
+        <div class="command-item open-drawer" data-target="certs-drawer">
+          <i class="ri-award-line" style="color: var(--emerald);"></i>
+          <span>View IBM & Masterclass Certifications</span>
+          <span class="command-shortcut">Certs</span>
+        </div>
+        <div class="command-item open-cv-modal">
+          <i class="ri-file-text-line" style="color: var(--amber);"></i>
+          <span>Preview & Print Curriculum Vitae</span>
+          <span class="command-shortcut">CV</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drawer Modals -->
+  <!-- 1. Projects Drawer Modal -->
+  <div class="modal-backdrop" id="projects-drawer">
+    <div class="modal-box" style="max-width: 900px;">
+      <button class="modal-close"><i class="ri-close-line"></i></button>
+      <span class="section-tag" style="margin-bottom: 0.5rem;"><i class="ri-stack-line"></i> Showcase</span>
+      <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">Featured <span class="gradient-text">Projects</span></h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Click filter tabs or select a project to inspect architectural details.</p>
+
+      <div class="project-filters" style="margin-bottom: 2rem;">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="mern">MERN Stack</button>
+        <button class="filter-btn" data-filter="php">PHP & MySQL</button>
+      </div>
+
+      <div class="projects-grid">
+        <div class="glass-card project-card" data-category="mern">
+          <div class="project-thumb">
+            <img src="assets/sports_portal.jpg" alt="University Sports Portal" class="project-img">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">University Sports Portal</h3>
+            <p class="project-desc">Full-stack sports platform managing clubs, tournaments, athletes, and training programs with secure role-based access.</p>
+            <div class="project-tech">
+              <span>Next.js</span><span>React</span><span>Node.js</span><span>MongoDB</span><span>Tailwind CSS</span><span>JWT</span>
+            </div>
+            <button class="btn btn-secondary btn-sm open-project-modal" data-project-id="sports">
+              <i class="ri-information-line"></i> Detailed Specs
+            </button>
+          </div>
+        </div>
+
+        <div class="glass-card project-card" data-category="php">
+          <div class="project-thumb">
+            <img src="assets/internship_system.jpg" alt="Internship Management System" class="project-img">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Internship Management System</h3>
+            <p class="project-desc">Web-based placement pipeline streamlining applications, evaluation tracking, and approvals for students and employers.</p>
+            <div class="project-tech">
+              <span>PHP</span><span>MySQL</span><span>Tailwind CSS</span><span>JavaScript</span>
+            </div>
+            <button class="btn btn-secondary btn-sm open-project-modal" data-project-id="internship">
+              <i class="ri-information-line"></i> Detailed Specs
+            </button>
+          </div>
+        </div>
+
+        <div class="glass-card project-card" data-category="mern">
+          <div class="project-thumb">
+            <img src="assets/wedding_suit.jpg" alt="Wedding Suit Collection System" class="project-img">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Wedding Suit Collection System</h3>
+            <p class="project-desc">Full-stack rental & sales suite managing fitting logs, customer orders, stock inventory, and store dashboards.</p>
+            <div class="project-tech">
+              <span>Next.js</span><span>React</span><span>Node.js</span><span>MongoDB</span><span>Bcrypt</span>
+            </div>
+            <button class="btn btn-secondary btn-sm open-project-modal" data-project-id="suit">
+              <i class="ri-information-line"></i> Detailed Specs
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Technical Skills Drawer Modal -->
+  <div class="modal-backdrop" id="skills-drawer">
+    <div class="modal-box" style="max-width: 850px;">
+      <button class="modal-close"><i class="ri-close-line"></i></button>
+      <span class="section-tag" style="margin-bottom: 0.5rem;"><i class="ri-code-box-line"></i> Capabilities</span>
+      <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem;">Technical <span class="gradient-text">Skills</span></h2>
+
+      <div class="skills-grid" style="grid-template-columns: 1fr;">
+        <div class="glass-card" style="margin-bottom: 1.25rem;">
+          <h3 class="skill-category-title"><i class="ri-layout-4-line"></i> Frontend Development</h3>
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>React & Next.js</span><span>90%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>JavaScript (ES6+)</span><span>88%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 88%;"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>Tailwind CSS, HTML5, CSS3</span><span>92%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 92%;"></div></div>
+          </div>
+          <div class="tag-cloud" style="margin-top: 1rem;">
+            <span class="tech-tag">React</span><span class="tech-tag">Next.js</span><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">Framer Motion</span>
+          </div>
+        </div>
+
+        <div class="glass-card" style="margin-bottom: 1.25rem;">
+          <h3 class="skill-category-title"><i class="ri-server-line"></i> Backend & Database Engineering</h3>
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>Node.js & Express.js</span><span>85%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>MongoDB & MySQL</span><span>85%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-info"><span>PHP & RESTful APIs</span><span>82%</span></div>
+            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 82%;"></div></div>
+          </div>
+          <div class="tag-cloud" style="margin-top: 1rem;">
+            <span class="tech-tag">Node.js</span><span class="tech-tag">Express.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">MySQL</span><span class="tech-tag">PHP</span><span class="tech-tag">JWT</span><span class="tech-tag">Bcrypt</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Education Drawer Modal -->
+  <div class="modal-backdrop" id="education-drawer">
+    <div class="modal-box" style="max-width: 750px;">
+      <button class="modal-close"><i class="ri-close-line"></i></button>
+      <span class="section-tag" style="margin-bottom: 0.5rem;"><i class="ri-graduation-cap-line"></i> Academics</span>
+      <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem;">Education & <span class="gradient-text">Degree</span></h2>
+
+      <div class="glass-card">
+        <div class="timeline">
+          <div class="timeline-item" style="margin-bottom: 0;">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">FEBRUARY 2024 – CURRENT</div>
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.4rem;">Bachelor of Information and Communication Technology (Hons)</h3>
+            <p style="color: var(--cyan); font-weight: 600; margin-bottom: 1rem;">Faculty of Technological Studies, University of Vavuniya, Sri Lanka</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">
+              Currently in final-year studies specializing in Software Engineering, Web Application Architecture, Relational & NoSQL Database Management Systems, Cyber Security, and Agile System Design.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Certifications Drawer Modal -->
+  <div class="modal-backdrop" id="certs-drawer">
+    <div class="modal-box" style="max-width: 750px;">
+      <button class="modal-close"><i class="ri-close-line"></i></button>
+      <span class="section-tag" style="margin-bottom: 0.5rem;"><i class="ri-award-line"></i> Qualifications</span>
+      <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem;">Verified <span class="gradient-text">Certifications</span></h2>
+
+      <div class="certs-grid">
+        <div class="glass-card cert-card" style="margin-bottom: 1rem;">
+          <div class="cert-icon"><i class="ri-cloud-line"></i></div>
+          <div>
+            <h3 class="cert-title">Introduction to Cloud Computing</h3>
+            <p class="cert-issuer">IBM Authorized Course (Coursera)</p>
+            <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.4rem;">Cloud architecture, IaaS/PaaS/SaaS models, and security principles.</p>
+          </div>
+        </div>
+
+        <div class="glass-card cert-card" style="margin-bottom: 1rem;">
+          <div class="cert-icon"><i class="ri-cpu-line"></i></div>
+          <div>
+            <h3 class="cert-title">Introduction to Software Engineering</h3>
+            <p class="cert-issuer">IBM Authorized Course (Coursera)</p>
+            <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.4rem;">SDLC, Agile methodology, Git operations, and system design patterns.</p>
+          </div>
+        </div>
+
+        <div class="glass-card cert-card">
+          <div class="cert-icon"><i class="ri-reactjs-line"></i></div>
+          <div>
+            <h3 class="cert-title">ReactJS: The Beginner Masterclass</h3>
+            <p class="cert-issuer">Certificate Course</p>
+            <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.4rem;">Component state management, custom hooks, and API integration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Single Project Details Modal -->
+  <div class="modal-backdrop" id="project-modal">
+    <div class="modal-box">
+      <button class="modal-close"><i class="ri-close-line"></i></button>
+      <span class="tech-tag" id="modal-project-category" style="margin-bottom: 0.75rem; display: inline-block;">Category</span>
+      <h2 class="project-title" id="modal-project-title" style="font-size: 1.8rem; margin-bottom: 1rem;">Project Title</h2>
+      <img src="" id="modal-project-img" alt="Project Preview" style="width: 100%; height: 260px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 1.5rem; border: 1px solid var(--border-subtle);">
+      
+      <h4 style="margin-bottom: 0.5rem; color: var(--text-primary);">Overview</h4>
+      <p id="modal-project-desc" style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;"></p>
+
+      <h4 style="margin-bottom: 0.5rem; color: var(--text-primary);">Key Architectural Features</h4>
+      <ul id="modal-project-features" style="list-style: none; padding: 0; margin-bottom: 1.5rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.5rem;"></ul>
+
+      <h4 style="margin-bottom: 0.5rem; color: var(--text-primary);">Technologies Employed</h4>
+      <div id="modal-project-tech" class="tag-cloud"></div>
+    </div>
+  </div>
+
+  <!-- 6. CV Quick Viewer Modal -->
+  <div class="modal-backdrop" id="cv-modal">
+    <div class="modal-box" style="max-width: 800px;">
+      <button class="modal-close"><i class="ri-close-line"></i></button>
+      <h2 style="font-size: 1.6rem; margin-bottom: 0.25rem;">Curriculum Vitae Preview</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.9rem;">K.M.Y.S. Kulathunga | Fourth-Year BICT (Hons) Undergraduate</p>
+      
+      <div style="background: var(--bg-surface); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); color: var(--text-secondary); font-size: 0.95rem; max-height: 60vh; overflow-y: auto;">
+        <h3 style="color: var(--text-primary); border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem; margin-bottom: 1rem;">K.M.Y.S. KULATHUNGA</h3>
+        <p><strong>Contact:</strong> +94 78 564 6809 | yashodakulathunga2000@gmail.com</p>
+        <p><strong>Links:</strong> github.com/dashboard | linkedin.com/in/yashoda-kulathunga-52b633389</p>
+
+        <h4 style="color: var(--cyan); margin-top: 1.25rem; margin-bottom: 0.4rem;">PROFESSIONAL SUMMARY</h4>
+        <p style="font-size: 0.9rem; line-height: 1.6;">
+          Motivated and detail-oriented final-year BICT (Hons) undergraduate at the University of Vavuniya with hands-on experience in full-stack web development using the MERN stack (MongoDB, Express.js, React, and Node.js) and Tailwind CSS. Skilled in developing responsive, user-friendly web applications through academic and personal projects. Seeking a Full-Stack Development Internship.
+        </p>
+
+        <h4 style="color: var(--cyan); margin-top: 1.25rem; margin-bottom: 0.4rem;">EDUCATION</h4>
+        <p><strong>Bachelor of Information and Communication Technology (Hons)</strong> (Feb 2024 – Current)</p>
+        <p style="font-size: 0.875rem; color: var(--text-muted);">Faculty of Technological Studies, University of Vavuniya, Sri Lanka</p>
+
+        <h4 style="color: var(--cyan); margin-top: 1.25rem; margin-bottom: 0.4rem;">CERTIFICATIONS</h4>
+        <ul style="padding-left: 1.25rem; font-size: 0.9rem;">
+          <li>Introduction to Cloud Computing – IBM Authorized Course (Coursera)</li>
+          <li>Introduction to Software Engineering – IBM Authorized Course (Coursera)</li>
+          <li>ReactJS: The Beginner Masterclass – Certificate Course</li>
+        </ul>
+
+        <h4 style="color: var(--cyan); margin-top: 1.25rem; margin-bottom: 0.4rem;">PROJECTS</h4>
+        <p><strong>University Sports Portal:</strong> Next.js, React, Node.js, Express.js, MongoDB, Tailwind CSS, JWT, Bcrypt, Framer Motion</p>
+        <p><strong>Internship Management System:</strong> PHP, MySQL, Tailwind CSS, JavaScript, HTML, CSS</p>
+        <p><strong>Wedding Suit Collection Management System:</strong> Next.js, React, Node.js, Express.js, MongoDB, Tailwind CSS, JWT, Bcrypt, Framer Motion</p>
+      </div>
+
+      <div style="margin-top: 1.5rem; text-align: right;">
+        <button onclick="window.print()" class="btn btn-primary btn-sm">
+          <i class="ri-printer-line"></i> Print / Save as PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
